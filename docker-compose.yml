@@ -11,20 +11,9 @@ services:
     ports:
       - 3001:2368
     environment:
-    # see https://docs.ghost.org/docs/config#section-running-ghost-with-config-env-variables
-    #   database__client: mysql
-    #   database__connection__host: db
-    #   database__connection__user: root
-    #   database__connection__password: example
-    #   database__connection__database: ghost
-        url: 'http://localhost:3001'
+        url: 'http://dev.dnd.house:3001'
 
     volumes:
       - ./ghost/content:/var/lib/ghost/content
       - ./ghost/config.development.json:/var/lib/ghost/config.development.json
       - ./ghost/config.production.json:/var/lib/ghost/config.production.json
-#   db:
-#     image: mysql:5.7
-#     restart: always
-#     environment:
-#       MYSQL_ROOT_PASSWORD: example
