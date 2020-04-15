@@ -11,7 +11,7 @@ services:
     ports:
       - 3001:2368
     environment:
-        url: 'http://dev.dnd.house:3001'
+        url: ${URL}
 
     volumes:
       - ./ghost/content:/var/lib/ghost/content
